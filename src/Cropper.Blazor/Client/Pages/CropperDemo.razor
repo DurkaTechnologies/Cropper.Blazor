@@ -1,7 +1,7 @@
 @page "/demo"
 @using Cropper.Blazor.Components
 
-<MudContainer Class="mt-5 px-4">
+<MudContainer Class="mt-5" MaxWidth="MaxWidth.Large">
     <MudGrid Class="mt-2">
         <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
             <MudCard Elevation="2">
@@ -9,17 +9,16 @@
                     <MudGrid>
                         <MudItem md="9">
                             <div class="img-container">
-                                <CropperComponent 
-                                    Class="cropper-demo"
-                                    OnCropStartEvent="OnCropStartEvent"
-                                    OnCropEndEvent="OnCropEndEvent"
-                                    OnCropEvent="OnCropEvent"
-                                    OnZoomEvent="OnZoomEvent"
-                                    OnCropMoveEvent="OnCropMoveEvent"
-                                    OnReadyEvent="OnCropReadyEvent"
-                                    OnLoadImageEvent="OnLoadImageEvent"
-                                    Src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-                                    Options="options">
+                                <CropperComponent Class="cropper-demo"
+                                                  OnCropStartEvent="OnCropStartEvent"
+                                                  OnCropEndEvent="OnCropEndEvent"
+                                                  OnCropEvent="OnCropEvent"
+                                                  OnZoomEvent="OnZoomEvent"
+                                                  OnCropMoveEvent="OnCropMoveEvent"
+                                                  OnReadyEvent="OnCropReadyEvent"
+                                                  OnLoadImageEvent="OnLoadImageEvent"
+                                                  Src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+                                                  Options="options">
 
                                 </CropperComponent>
                             </div>
@@ -36,6 +35,131 @@
                     </MudGrid>
                 </MudCardContent>
             </MudCard>
+        </MudItem>
+
+        <MudItem md="9">
+            <MudCard>
+                <MudCardContent>
+
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+
+        <MudItem md="3">
+
+            <MudButtonGroup Color="Color.Primary" Variant="Variant.Filled">
+                <MudButton>16:9</MudButton>
+                <MudButton>4:3</MudButton>
+                <MudButton>1:1</MudButton>
+                <MudButton>2:3</MudButton>
+                <MudButton>Free</MudButton>
+            </MudButtonGroup>
+
+            <MudButtonGroup Color="Color.Primary" Variant="Variant.Filled">
+                <MudButton>VM0</MudButton>
+                <MudButton>VM1</MudButton>
+                <MudButton>VM2</MudButton>
+                <MudButton>VM3</MudButton>
+            </MudButtonGroup>
+
+            <MudMenu Label="Toggle Options" Variant="Variant.Filled" Color="Color.Primary" 
+                Dense="true" Direction="Direction.Bottom" OffsetY="true">
+                <MudMenuItem>
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        responsive        
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        restore           
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        checkCrossOrigin  
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        checkOrientation  
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        modal             
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        guides            
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        center            
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        highlight         
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        background        
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        autoCrop          
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        movable           
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        rotatable         
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        scalable          
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        zoomable          
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        zoomOnTouch       
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        zoomOnWheel       
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        cropBoxMovable    
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        cropBoxResizable  
+                    </MudCheckBox>        
+                </MudMenuItem>            
+                <MudMenuItem>             
+                    <MudCheckBox T="bool" Color="Color.Primary" Dense="true">
+                        toggleDragModeOnDblclick
+                    </MudCheckBox>
+                </MudMenuItem>
+            </MudMenu>
         </MudItem>
     </MudGrid>
 </MudContainer>
